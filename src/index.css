@@ -7,7 +7,55 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.layout {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--light-green)
+}
+.body-styles {
+  padding: 10px 50px 50px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  background: var(--white);
+}
+@media only screen and (min-width: 1680px) {
+  .candidateDashboard .inner-block {
+      width: 80%;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .candidateDashboard .inner-block {
+      width: 60%;
+      height: 88%;
+      }
+      .StatusDivTop h6 {
+          font-size: 18px;
+      }
+}
+@media only screen and (max-width: 1999px) {
+  .candidateDashboard .inner-block {
+      height: 90%;
+  }
+}
 
+@media only screen and (max-width: 1400px) {
+
+  .candidateDashboard .inner-block {
+  height: 90%;
+  }
+    .AssessmentTop > a > .card-inner-block{
+      width: 65%;
+    
+    }
+    .StatusDiv h3 {
+      font-size: 20px;
+  }
+
+  .Head h1 {
+      font-size: 35px;
+  }
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

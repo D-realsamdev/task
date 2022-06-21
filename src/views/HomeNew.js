@@ -1,41 +1,46 @@
-import { useState, useEffect } from 'react';
-import { Col, Alert, Card, Row, Badge, Button } from 'react-bootstrap';
+// import { useState, useEffect } from 'react';
+import { Row, Image,Container } from 'react-bootstrap';
 import Sidebar from '../components/Sidebar/Sidebar';
 import '../index.css';
-// import './CandidateDashboard/CandidateDashboard.css';
-import { useNavigate } from 'react-router-dom';
-
+// import { useNavigate } from 'react-router-dom';
+import recording from "../images/RECORDING.png";
+import bg from "../images/istockphoto-1160927409-612x612.jpg";
+import VideoCard from "../components/VideoCard"
+// import { Container } from '@material-ui/core';
 const IntegrityTestNew = () => {
-	const sideNavLinks = {
-		name: "Test",
-		email: "test@example.com",
-		role_applied_for: "Teller"
-	}
-	const transformData = (arr) => {
-		const results = []
-	
-		Object.entries(arr).map(val => results.push({
-		  title: val[0].split(/(?=[A-Z])|[_]/).join(" "),
-		  value: val[1]
-		}))
-	
-		return results
-	}
 	return (
-		<div className="layout candidateDashboard">
+		<div className="layout ">
 			<Sidebar />
-
+			<Container   style={customMainDivStyling}>
+					<h2>
+						KidsTech Africa
+					</h2>
+					<hr style={{ color: "white" }} />
+					<Row>
+						<small>
+							<Image  src={recording} /> 
+							Rec 00:12:36
+						</small>
+						<strong className='' >
+							Sapati Model College, Ilorin
+						</strong>
+					</Row>
+					<Row>
+						<VideoCard imgSrc={bg} imgAlt="Background Image"/>
+					</Row>
+			</Container>
 		</div>
 	);
 };
 
 export default IntegrityTestNew;
 
-const customButtonStyling = {
-	background: 'var(--orange)',
-	color: 'var(--white)',
-	padding: '.7rem 2rem',
-	border: 'none',
+const customMainDivStyling = {
+	background: '',
+	color: 'white',
+	padding: '.4rem .7rem',
+	border: '.1px solid grey',
+	margin:"1em 0em"
 };
 const commonStyles = {
 	borderRadius: '10px',

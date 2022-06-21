@@ -1,20 +1,24 @@
-import { BsBellFill, BsCalendar, BsCalendar2CheckFill, BsCameraVideoFill, BsFillBookFill, BsFillHouseDoorFill, BsPerson, BsPersonBadgeFill, BsRecordCircleFill } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
 import styles from "./Sidebar.module.css";
-import { AiFillBook } from "react-icons/ai";
-import { Link, useNavigate } from "react-router-dom";
-import { BiLogOut, BiUser } from 'react-icons/bi';
+import { Link } from "react-router-dom";
 import Image from 'react-bootstrap/Image';
 import logo from "../../images/LOGO.jpg";
-const Sidebar = ({ sideNavLinks }) => {
-  let navigate = useNavigate();
+import home from "../../images/HOME ICON.png";
+import profile from "../../images/PROFILE.png";
+import notification from "../../images/NOTIFICATION.png";
+import statistics from "../../images/STATISTICS.png";
+import schedule from "../../images/SCHEDULE.png";
+import recording from "../../images/RECORDED CLASS.png";
+import liveVideo from "../../images/LIVE VIDEO.png";
+const Sidebar = () => {
+  // let navigate = useNavigate();
 
-  const logOut = () => {
-    sessionStorage.removeItem("ccAuth")
-    // sessionStorage.clear();
+  // const logOut = () => {
+  //   sessionStorage.removeItem("ccAuth")
+  //   // sessionStorage.clear();
 
-    navigate("/login");
-  }
+  //   navigate("/login");
+  // }
   return (
     // <div className={styles.s-layout__sidebar}>
     <div>
@@ -36,27 +40,38 @@ const Sidebar = ({ sideNavLinks }) => {
           </li>
           <li style={customStyleList}>
               <Link to="#">
-                <BsFillHouseDoorFill size={20} color="smokewhite"/>
+                <Image  src={home} rounded/>
               </Link>
           </li>
           <li style={customStyleList}>
               <Link to="#">
-                <BsPersonBadgeFill size={20} color="smokewhite" />
+                <Image  src={profile} rounded/>
               </Link>
           </li>
           <li style={customStyleList}>
               <Link to="#">
-                <BsBellFill size={20} color="smokewhite" />
+                <Image  src={notification} rounded/>
               </Link>
           </li>
           <li style={customStyleList}>
               <Link to="#">
-                <BsCalendar2CheckFill size={20} color="smokewhite" />
+                <Image  src={statistics} rounded/>
               </Link>
           </li>
           <li style={customStyleList}>
               <Link to="#">
-                <BsCameraVideoFill size={20} />
+                <Image  src={schedule} rounded/>
+              </Link>
+          </li>
+          <li style={customStyleList}>
+              <Link to="#">
+                <Image  src={recording} rounded/>
+              </Link>
+          </li>
+          
+          <li style={customStyleList}>
+              <Link to="#">
+                <Image  src={liveVideo} rounded/>
               </Link>
           </li>
         </ul>
