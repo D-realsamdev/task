@@ -36,7 +36,7 @@ const Sidebar = () => {
       >
         <ul className={styles.list}>
           <li style={customStyleList}>
-                <Image  src={logo} rounded/>
+                <Image style={{borderRadius:"20%"}} src={logo} rounded/>
           </li>
           <li style={customStyleList}>
               <Link to="#">

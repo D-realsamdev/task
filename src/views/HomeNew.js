@@ -1,13 +1,12 @@
 // import { useState, useEffect } from 'react';
-import { Row, Image,Container } from 'react-bootstrap';
+import { Row, Image,Container,Col } from 'react-bootstrap';
 import Sidebar from '../components/Sidebar/Sidebar';
 import '../index.css';
 // import { useNavigate } from 'react-router-dom';
 import recording from "../images/RECORDING.png";
 import bg from "../images/istockphoto-1160927409-612x612.jpg";
-import VideoCard from "../components/VideoCard"
-// import { Container } from '@material-ui/core';
-const IntegrityTestNew = () => {
+import VideoCard from "../components/VideoCard";
+const VideoHome = () => {
 	return (
 		<div className="layout ">
 			<Sidebar />
@@ -16,14 +15,18 @@ const IntegrityTestNew = () => {
 						KidsTech Africa
 					</h2>
 					<hr style={{ color: "white" }} />
-					<Row>
+					<Row className='mb-2'>
+					<Col md={3}>
 						<small>
 							<Image  src={recording} /> 
 							Rec 00:12:36
-						</small>
-						<strong className='' >
+						</small></Col>
+    				<Col md={{ span: 4, offset: 5 }}>
+						<strong>
 							Sapati Model College, Ilorin
 						</strong>
+					</Col>
+						
 					</Row>
 					<Row>
 						<VideoCard imgSrc={bg} imgAlt="Background Image"/>
@@ -33,7 +36,7 @@ const IntegrityTestNew = () => {
 	);
 };
 
-export default IntegrityTestNew;
+export default VideoHome;
 
 const customMainDivStyling = {
 	background: '',
@@ -41,12 +44,4 @@ const customMainDivStyling = {
 	padding: '.4rem .7rem',
 	border: '.1px solid grey',
 	margin:"1em 0em"
-};
-const commonStyles = {
-	borderRadius: '10px',
-	borderstyle: 'solid',
-	borderwidth: '10px',
-	borderColor: '#87AA62',
-	textAlign: 'left',
-	margin: 'auto'
 };
