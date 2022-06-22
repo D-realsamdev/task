@@ -27,7 +27,7 @@ const Login = () => {
 						</p> */}
 					</Col>
                 </Row>
-                <div sm={12}  style={customMainDivStyling}>
+                <div sm={12} lg={6} md={6}  style={customMainDivStyling}>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Row>
                             <input type="text"  style={inputStyle}
@@ -83,11 +83,9 @@ const Login = () => {
 export default Login;
 
 const customMainDivStyling = {
-    padding: "3em 3em",
-      height: "450px",
+    padding: "4em 4em",
       margin:"auto",
       color:"white",
-      width:'60%',
       borderRadius: "10px",
       backgroundImage:`url('${bgLogin}')`,
       backgroundRepeat: "no-repeat",
