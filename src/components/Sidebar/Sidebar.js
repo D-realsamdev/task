@@ -10,6 +10,8 @@ import statistics from "../../images/STATISTICS.png";
 import schedule from "../../images/SCHEDULE.png";
 import recording from "../../images/RECORDED CLASS.png";
 import liveVideo from "../../images/LIVE VIDEO.png";
+import avatar from "../../images/ACCOUNT.png";
+import volume from "../../images/VOLUME 2.png";
 const Sidebar = () => {
   // let navigate = useNavigate();
 
@@ -27,7 +29,7 @@ const Sidebar = () => {
         href="#0"
         style={{ zIndex: "1000" }}
       >
-        <FaBars size={25} />
+        <FaBars size={25} style={{textAlign: "right"}} />
       </a>
 
       <nav
@@ -35,7 +37,7 @@ const Sidebar = () => {
         style={{ background: "var(--light-green)", zIndex: "10000" }}
       >
         <ul className={styles.list}>
-          <li style={customStyleList}>
+          <li style={customStyleListLg}>
                 <Image style={{borderRadius:"20%"}} src={logo} rounded/>
           </li>
           <li style={customStyleList}>
@@ -74,6 +76,16 @@ const Sidebar = () => {
                 <Image  src={liveVideo} rounded/>
               </Link>
           </li>
+          <li style={customStyleListVo}>
+              <Link to="#">
+                <Image  src={volume} rounded/>
+              </Link>
+          </li>
+          <li style={customStyleListAv}>
+              <Link to="#">
+                <Image  src={avatar} rounded/>
+              </Link>
+          </li>
         </ul>
       </nav>
     </div>
@@ -83,5 +95,14 @@ const Sidebar = () => {
 export default Sidebar;
 
 const customStyleList  = {
-  margin: "3em 1em",
+  margin: "2em 1.5em",
+}
+const customStyleListLg  = {
+  margin: "2em 1em",
+}
+const customStyleListVo  = {
+  margin: "1em 1em",
+}
+const customStyleListAv  = {
+  margin: "2em 1em",
 }

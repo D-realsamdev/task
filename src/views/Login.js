@@ -13,19 +13,24 @@ const Login = () => {
 	return (
 		<div className='d-flex align-item-center justify-content-center' style={{color:"white"}} >
             
-			<Container >
+			      <Container >
                 <Row className='mt-3'>
-                     <Col md={5}>
+                    <Col md={5}>
                             <h2>
                                 <Image style={{borderRadius:"20%"}} src={logo} rounded/>
                                 &nbsp;  KidsTech Africa
                             </h2>
-                     </Col>
-    				<Col md={{  offset: 5 }}>
-						{/* <p>
-							Log in/Sign Up
-						</p> */}
-					</Col>
+                    </Col>
+                    {/* <Col md={{ span: 5, offset: 9}}>
+                      <strong>
+                        Login/Sign Up
+                      </strong>
+                    </Col> */}
+                    <Col md={{  offset: 5 }}>
+                    {/* <p>
+                      Log in/Sign Up
+                    </p> */}
+                    </Col>
                 </Row>
                 <div sm={12} lg={6} md={6}  style={customMainDivStyling}>
                     <form onSubmit={handleSubmit(onSubmit)}>
@@ -75,7 +80,7 @@ const Login = () => {
                         <p className='mt-4'>New User? Please register here</p>
                       </Card>
                 </div>
-			</Container>
+			      </Container>
 		</div>
 	);
 };
